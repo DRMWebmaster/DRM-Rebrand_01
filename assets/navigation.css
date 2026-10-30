@@ -49,3 +49,7 @@
 .drm-site-header .drm-nav-shell{padding-left:0}
 .drm-site-header .drm-brand{width:120px;min-width:120px;justify-content:center;padding-left:18px;padding-right:18px}
 @media(max-width:1100px){.drm-site-header .drm-nav-shell{padding-left:0}.drm-site-header .drm-brand{width:98px;min-width:98px;padding-left:15px;padding-right:15px}}
+
+/* Uniform regular-weight, arrow-free shared header CTA. */
+.drm-site-header .drm-nav-donate{font-weight:400!important}
+.drm-site-header .drm-nav-donate::after{content:none!important}
