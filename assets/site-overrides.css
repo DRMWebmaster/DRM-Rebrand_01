@@ -69,3 +69,6 @@ body :is(.vision,.vision-statement) :is(h1,h2,h3,p) {font-size:clamp(23px,2.6vw,
 @media(max-width:640px){
  body :is(main,section,article) p:not(.note):not(.prototype-label):not(.eyebrow):not(.tag):not(.chip){line-height:1.55}
 }
+
+/* Readable pre-heading labels across all prototypes (formerly ~11–13px). */
+body :is(.eyebrow,.kicker,.chapter-number,.section-label){font-size:clamp(15px,1.25vw,17px) !important;line-height:1.45;letter-spacing:.11em;}
