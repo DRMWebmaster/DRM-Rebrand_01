@@ -57,7 +57,7 @@ a.btn:focus-visible,button.btn:focus-visible{outline:3px solid var(--drm-banana)
   --drm-h2-size:clamp(30px,3vw,44px);
   --drm-h3-size:clamp(24px,2.2vw,32px);
 }
-body :is(main,section,article) p:not(.note):not(.prototype-label):not(.eyebrow):not(.tag):not(.chip) {
+body :is(main,section,article) p:not(.note):not(.prototype-label):not(.eyebrow):not(.tag):not(.chip):not(.drm-vision-copy) {
   font-size:var(--drm-body-size) !important;
   line-height:1.6;
 }
@@ -72,3 +72,17 @@ body :is(.vision,.vision-statement) :is(h1,h2,h3,p) {font-size:clamp(23px,2.6vw,
 
 /* Readable pre-heading labels across all prototypes (formerly ~11–13px). */
 body :is(.eyebrow,.kicker,.chapter-number,.section-label){font-size:clamp(15px,1.25vw,17px) !important;line-height:1.45;letter-spacing:.11em;}
+
+/* Homepage vision: independent editable font size, rather than inherited body text. */
+.drm-vision-statement .drm-vision-copy{font-size:2.5em!important;line-height:1.38;}
+/* Site-wide regular-weight button labels; leave navigation links and body links alone. */
+:is(a,button,input[type="submit"],input[type="button"]).btn,
+:is(a,button).button,
+:is(a,button).button-primary,
+:is(a,button).cta-button,
+:is(a,button).drm-nav-donate,
+:is(a,button).drm-nav-toggle,
+button[type="submit"],input[type="submit"],input[type="button"]{font-weight:400!important;}
+/* Remove decorative arrow pseudo-elements from CTA/button designs. */
+:is(.btn,.button,.button-primary,.cta-button,.drm-nav-donate)::after,
+:is(.btn,.button,.button-primary,.cta-button,.drm-nav-donate)::before{content:none!important;}
