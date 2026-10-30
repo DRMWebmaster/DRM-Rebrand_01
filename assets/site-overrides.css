@@ -27,3 +27,24 @@ a.btn:not(.outline):not(.light):not(.white):hover,button.btn:not(.outline):not(.
  background:var(--drm-blueberry);border-color:var(--drm-blueberry);color:white;
 }
 a.btn:focus-visible,button.btn:focus-visible{outline:3px solid var(--drm-banana);outline-offset:3px}
+
+/* v1.1 visual hierarchy: keep Blueberry predominant, add warm neutrals and selective Banana. */
+:root{--paper:var(--drm-oatmeal-light);--cream:var(--drm-oatmeal-light);--fog:var(--drm-oatmeal-light);--gray:var(--drm-oatmeal-light);--yellow:var(--drm-banana);--gold:var(--drm-banana)}
+/* A bright accent on dark fields; yellow always uses Blueberry text. */
+.section.navy .eyebrow,.continuum .eyebrow,.hero .eyebrow,.band .eyebrow,
+.story .eyebrow,.final .eyebrow,.bridge .eyebrow{color:var(--drm-banana)}
+/* Give the homepage a softer, warmer rhythm without replacing the hero. */
+.section.fog,.intro,.chapter.tinted,.faq,.programs:not(.story){background-color:var(--drm-oatmeal-light)}
+/* Unify core strategies in Blueberry, including selected cards. */
+.continuum .tile,.continuum .tile.active{background:var(--drm-blueberry);color:white}
+.continuum .tile:hover,.continuum .tile:focus-visible{background:var(--drm-blueberry-medium);color:white}
+.strategy-tab,.strategy-tab[aria-selected="true"]{background:var(--drm-blueberry);color:white}
+.strategy-tab:hover{background:var(--drm-blueberry-medium);color:white}
+/* White text on dark feature blocks, Blueberry text on yellow. */
+.band[style*="background"] .eyebrow{color:inherit}
+.drm-banana-highlight{background:var(--drm-banana);color:var(--drm-blueberry)}
+.drm-banana-highlight :is(h1,h2,h3,p,span){color:var(--drm-blueberry)}
+/* Restrict strong DRM Red to intentionally chosen components rather than strategy coding. */
+.program-card:nth-child(2n),.program-card,.action-card{border-top-color:var(--drm-water)}
+/* Accessible keyboard indication, motion reduced for people who request it. */
+:where(a,button,summary):focus-visible{outline:3px solid var(--drm-banana);outline-offset:3px}
