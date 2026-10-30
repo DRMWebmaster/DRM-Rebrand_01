@@ -1,0 +1,5 @@
+:root{--drm-navy:#202945;--drm-water:#62b1bd;--drm-burgundy:#862633;--drm-placeholder:#666666;--drm-white:#ffffff}
+/* Shared prototype refinements. Link from HTML after any page-specific styles. */
+a.btn[href],button.btn,.button-primary{transition:background-color .2s ease,color .2s ease}
+button[style*="#62b1bd"],a[style*="#62b1bd"]{color:#fff}
+img[src*="placehold.co"]{background:#666666;object-fit:cover}
