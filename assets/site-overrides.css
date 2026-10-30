@@ -48,3 +48,24 @@ a.btn:focus-visible,button.btn:focus-visible{outline:3px solid var(--drm-banana)
 .program-card:nth-child(2n),.program-card,.action-card{border-top-color:var(--drm-water)}
 /* Accessible keyboard indication, motion reduced for people who request it. */
 :where(a,button,summary):focus-visible{outline:3px solid var(--drm-banana);outline-offset:3px}
+
+/* v1.1 global typography: 20px content baseline, restrained responsive headings.
+   These overrides follow each prototype's embedded stylesheet. */
+:root{
+  --drm-body-size:20px;
+  --drm-h1-size:clamp(38px,4.2vw,64px);
+  --drm-h2-size:clamp(30px,3vw,44px);
+  --drm-h3-size:clamp(24px,2.2vw,32px);
+}
+body :is(main,section,article) p:not(.note):not(.prototype-label):not(.eyebrow):not(.tag):not(.chip) {
+  font-size:var(--drm-body-size) !important;
+  line-height:1.6;
+}
+body h1 {font-size:var(--drm-h1-size) !important;line-height:1.13;}
+body h2 {font-size:var(--drm-h2-size) !important;line-height:1.16;}
+body h3 {font-size:var(--drm-h3-size) !important;line-height:1.22;}
+/* The homepage vision copy is a deliberate, smaller statement. */
+body :is(.vision,.vision-statement) :is(h1,h2,h3,p) {font-size:clamp(23px,2.6vw,30px) !important;}
+@media(max-width:640px){
+ body :is(main,section,article) p:not(.note):not(.prototype-label):not(.eyebrow):not(.tag):not(.chip){line-height:1.55}
+}
