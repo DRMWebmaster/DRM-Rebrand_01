@@ -19,7 +19,7 @@ Status: In progress. Branch: `1.1`. No deployment requested. This file tracks im
 - [ ] Review `index.html` for former four-strategy language and update the five-strategy introduction.
 - [x] Review `our-programs.html`: program directory should not assign exclusive strategy buckets.
 - [x] Add cross-program strategy guidance to all five `strategies/*.html` pages.\n- [ ] Review each strategy page's remaining copy and visual presentation for consistency.
-- [ ] Update each `programs/*.html` with contextual 'How We Help You Move Forward' sections where accurately supported.
+- [ ] Update each `programs/*.html` with contextual 'How We Help You Move Forward' sections where accurately supported.\n  - [x] New Life Program — checked against live Get Help service descriptions.\n  - [x] Bridge & Family Shelter — Bridge description checked against live Get Help requirements; family shelter details still need separate confirmation.\n  - [x] Prevention — checked against live How We Help description.\n  - [ ] Remaining five program pages and final content verification.
 
 ### Stage B — Who We Are / About (planned)
 - [ ] About Us
