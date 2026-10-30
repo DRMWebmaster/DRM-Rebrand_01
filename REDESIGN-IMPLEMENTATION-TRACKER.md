@@ -14,7 +14,7 @@ Status: In progress. Branch: `1.1`. No deployment requested. This file tracks im
 ## Build stages
 ### Stage A — Existing architecture (in progress)
 - [x] Add content architecture rules to `website-design-standards.html`.
-- [ ] Redesign `get-help.html` as needs-first landing page; verify destination, hours, location and eligibility.
+- [x] Implement first-pass needs-first entry cards in `get-help.html` (six visitor needs and existing prototype links).\n- [ ] Validate all Get Help destinations, hours, locations, and eligibility against current approved operational information before release.
 - [ ] Refine `what-we-do.html` to show strategies working together.
 - [ ] Review `index.html` for former four-strategy language and update the five-strategy introduction.
 - [ ] Review `our-programs.html`: program directory should not assign exclusive strategy buckets.
