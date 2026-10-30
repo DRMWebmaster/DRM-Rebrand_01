@@ -19,7 +19,7 @@ function href(s){return /^https?:\/\//.test(s)?s:local(s)}
 function anchor(label,url,cls){const a=document.createElement("a");a.textContent=label;a.href=href(url);if(cls)a.className=cls;return a}
 const header=document.createElement("header");header.className="drm-site-header";header.setAttribute("data-drm-navigation","1");
 const shell=document.createElement("div");shell.className="drm-nav-shell";
-const brand=anchor("","index.html","drm-brand");brand.setAttribute("aria-label","Denver Rescue Mission homepage");for(const word of ["DENVER","RESCUE","MISSION"]){const line=document.createElement("span");line.textContent=word;brand.appendChild(line)}shell.appendChild(brand);
+const brand=anchor("","index.html","drm-brand");brand.setAttribute("aria-label","Denver Rescue Mission homepage");const logo=document.createElement("img");logo.src=local("assets/DRM_logo.svg");logo.alt="Denver Rescue Mission";logo.width=101;logo.height=90;brand.appendChild(logo);shell.appendChild(brand);
 const toggle=document.createElement("button");toggle.type="button";toggle.className="drm-nav-toggle";toggle.setAttribute("aria-expanded","false");toggle.setAttribute("aria-controls","drm-main-nav");toggle.textContent="☰ Menu";shell.appendChild(toggle);
 const nav=document.createElement("nav");nav.className="drm-nav";nav.id="drm-main-nav";nav.setAttribute("aria-label","Main navigation");
 for(const [label,url,children] of links.slice(0,4)){const group=document.createElement("div");group.className="drm-nav-group drm-primary";const main=anchor(label,url,"drm-nav-heading");group.appendChild(main);
