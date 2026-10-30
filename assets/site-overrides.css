@@ -58,7 +58,7 @@ a.btn:focus-visible,button.btn:focus-visible{outline:3px solid var(--drm-banana)
   --drm-h3-size:clamp(24px,2.2vw,32px);
 }
 body :is(main,section,article) p:not(.note):not(.prototype-label):not(.eyebrow):not(.tag):not(.chip):not(.drm-vision-copy) {
-  font-size:var(--drm-body-size) !important;
+  font-size:var(--drm-body-size);
   line-height:1.6;
 }
 body h1 {font-size:var(--drm-h1-size) !important;line-height:1.13;}
