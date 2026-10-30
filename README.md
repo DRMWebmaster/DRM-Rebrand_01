@@ -34,3 +34,16 @@ GitHub Pages is public when configured on a public repository; **do not upload p
 ## Editing
 
 Each HTML page is self-contained (styles and image data are embedded). Commit future changes to the relevant HTML pages. Avoid editing a second copy of the page outside the repository after publication.
+
+## Version 1.1 — brand color refresh
+
+Branch: `1.1` (kept independent from the published `main` v1.0 baseline).
+
+- All 18 active prototype pages now link `assets/site-overrides.css` using correct relative paths.
+- The shared stylesheet defines named standard, medium, and light tokens for Blueberry, Water, Banana, Pumpkin, Bell Pepper, Apple, and Oatmeal. DRM Red is defined as a single standard color.
+- Blueberry is dominant, all five core strategies use Blueberry, and strong green/orange strategy coding is avoided.
+- Light Oatmeal introduces warm neutral sections; Banana adds a restrained contrast accent with Blueberry text.
+- Default CTAs are Water with white lettering and Blueberry hover states; DRM Red remains available for selective use.
+- Homepage-only hero and vision, Stay Connected signup visual, and screenshot footer remain unchanged.
+
+The project is a visual concept. Before promoting `1.1` in GitHub Pages, review responsive layouts, text contrast, and the appearance of individual sections. On this repository, Settings → Pages → Deploy from a branch → `1.1` / `(root)` switches the public preview.
