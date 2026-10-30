@@ -39,4 +39,16 @@ searchButton.addEventListener("click",()=>{const open=searchForm.classList.toggl
 toggle.addEventListener("click",()=>{const open=nav.classList.toggle("is-mobile-open");toggle.setAttribute("aria-expanded",String(open));toggle.textContent=open?"✕ Close":"☰ Menu"});
 const old=document.querySelector("header");if(old)old.replaceWith(header);else document.body.insertBefore(header,document.body.firstChild);
 const sheet=document.createElement("link");sheet.rel="stylesheet";sheet.href=local("assets/navigation.css");document.head.appendChild(sheet);
+/* Remove trailing decorative arrow glyphs from button text, preserving nested icons and links. */
+function cleanButtonArrows(){
+ const items=document.querySelectorAll('a.btn,button.btn,a.button,button.button,a.button-primary,button.button-primary,a.cta-button,button.cta-button,a.drm-nav-donate,button[type="submit"],input[type="submit"],input[type="button"]');
+ for(const el of items){
+   if(el.matches('input')){el.value=el.value.replace(/\\s*[↗↖↘↙→←➜➔➝➞❯›»]\\s*$/u,'').trimEnd();continue;}
+   const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
+   let last=null;while(walker.nextNode())if(walker.currentNode.nodeValue.trim())last=walker.currentNode;
+   if(last)last.nodeValue=last.nodeValue.replace(/\\s*[↗↖↘↙→←➜➔➝➞❯›»]\\s*$/u,'').trimEnd();
+ }
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanButtonArrows,{once:true});
+else cleanButtonArrows();
 })();
