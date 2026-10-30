@@ -39,7 +39,7 @@ Each HTML page is self-contained (styles and image data are embedded). Commit fu
 
 Branch: `1.1` (kept independent from the published `main` v1.0 baseline).
 
-- All 18 active prototype pages now link `assets/site-overrides.css` using correct relative paths.
+- All 17 active prototype pages now link `assets/site-overrides.css` using correct relative paths.
 - The shared stylesheet defines named standard, medium, and light tokens for Blueberry, Water, Banana, Pumpkin, Bell Pepper, Apple, and Oatmeal. DRM Red is defined as a single standard color.
 - Blueberry is dominant, all five core strategies use Blueberry, and strong green/orange strategy coding is avoided.
 - Light Oatmeal introduces warm neutral sections; Banana adds a restrained contrast accent with Blueberry text.
