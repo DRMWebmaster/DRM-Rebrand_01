@@ -3,3 +3,27 @@
 a.btn[href],button.btn,.button-primary{transition:background-color .2s ease,color .2s ease}
 button[style*="#62b1bd"],a[style*="#62b1bd"]{color:#fff}
 img[src*="placehold.co"]{background:#666666;object-fit:cover}
+
+/* DRM Rebrand 1.1 — brand color foundation (applies where linked after page styles) */
+:root{
+ --drm-red:#862633;
+ --drm-blueberry:#202945;--drm-blueberry-medium:#535A6D;--drm-blueberry-light:#A5A5B1;
+ --drm-water:#62B1BD;--drm-water-medium:#94C5CC;--drm-water-light:#CCE1E4;
+ --drm-banana:#FFC845;--drm-banana-medium:#F8D378;--drm-banana-light:#FCE9C1;
+ --drm-oatmeal:#D7D2CB;--drm-oatmeal-medium:#E3DFDA;--drm-oatmeal-light:#F3F1EF;
+ --drm-pumpkin:#F68A32;--drm-pumpkin-medium:#FEAF6C;--drm-pumpkin-light:#FFDCBE;
+ --drm-bell-pepper:#648C1C;--drm-bell-pepper-medium:#92AC63;--drm-bell-pepper-light:#CFDAB8;
+ --drm-apple:#D8292F;--drm-apple-medium:#ED7567;--drm-apple-light:#FDC4BB;
+ --drm-navy:var(--drm-blueberry);--drm-water-blue:var(--drm-water);--drm-white:#fff;
+}
+/* Blueberry-led strategy cards; no multicolored category coding. */
+.strategy-tab,.strategy-card,.strategy-tile{--strategy-color:var(--drm-blueberry)}
+.strategy-tab:hover,.strategy-tab[aria-selected="true"]{background:var(--drm-blueberry-medium);color:white}
+/* Consistent high-contrast CTA behavior, respecting existing visual variants. */
+a.btn:not(.outline):not(.light):not(.white),button.btn:not(.outline):not(.light):not(.white){
+ background:var(--drm-water);border-color:var(--drm-water);color:white;
+}
+a.btn:not(.outline):not(.light):not(.white):hover,button.btn:not(.outline):not(.light):not(.white):hover{
+ background:var(--drm-blueberry);border-color:var(--drm-blueberry);color:white;
+}
+a.btn:focus-visible,button.btn:focus-visible{outline:3px solid var(--drm-banana);outline-offset:3px}
