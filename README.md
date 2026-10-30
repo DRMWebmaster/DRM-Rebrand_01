@@ -1,17 +1,36 @@
 # DRM Rebranding Phase One
 
-This repository is for Denver Rescue Mission’s HTML website redesign prototypes. It is a **concept site**, not the live WordPress website.
+Design prototypes for Denver Rescue Mission. This is a **concept site**, not a production CMS build.
 
-## Planned site structure
-- `index.html` — homepage (Vernon banner and vision statement only here)
-- `what-we-do.html` — What We Do overview
-- `strategies/` — Prevention, Dignity, Recovery, Readiness, Housing
-- `our-programs.html` and `programs/` — program landing and individual programs
-- `get-help.html` — Get Help overview
+## Structure
 
-The full 21-file prototype package is prepared for upload. Pages use relative links to connect internally. The sitewide email subscription form is for visual demonstration only and does not collect subscriptions; the footer and homepage hero are embedded screenshots.
+- `index.html`: homepage (the only page with the Vernon hero image and vision statement)
+- `what-we-do.html`: What We Do overview
+- `strategies/`: five strategy pages
+- `our-programs.html` and `programs/`: program overview and eight program pages
+- `get-help.html`: help landing page
+- `archive/what-we-do-v1.html`: superseded earlier design retained for reference
 
-## GitHub Pages (after review and approval)
-When the site is ready to be public, choose whether to make the repository public and enable **Settings → Pages → Deploy from branch → main → /(root)**. The intended preview URL is `https://drmwebmaster.github.io/DRM-Rebrand_01/` once publishing has succeeded. **The repository is private and GitHub Pages is not enabled yet.**
+The prototype pages link to one another using **relative HTML links**. The collapsible “Explore all prototype pages” directory provides a simple cross-page index without altering the main modeled WordPress header. External links intentionally point to the live Mission site where no prototype page exists.
 
-Do not upload sensitive donor or client information, secrets, or unapproved material.
+## GitHub Pages
+
+1. Create a public repository called `drm-rebranding-phase-one` under the desired GitHub account or organization.
+2. Upload the contents of this directory to the **root of the default `main` branch**, including `.nojekyll` (or push via Git).
+3. In **Settings > Pages**, select **Deploy from a branch**, branch **main**, folder **/(root)**, then save.
+4. View the published site at `https://OWNER.github.io/drm-rebranding-phase-one/` (replace `OWNER` with actual repository owner).
+
+GitHub Pages is public when configured on a public repository; **do not upload private donor information, credentials, unpublished client stories, or API keys**.
+
+## Current limitations
+
+- Header and footer are design approximations/screenshots, not live WordPress elements.
+- The homepage hero and the sitewide footer are embedded as image data for portability; screen-shot text/links cannot be independently edited or clicked.
+- Newsletter form is a visual concept; it does not submit to a subscriber list.
+- Some placeholder images use placehold.co and therefore require internet connectivity; styled fallbacks may be visible if blocked.
+- Program and strategy content may be illustrative and requires editorial/program review before publication.
+- Archived v1 overview is for reference only.
+
+## Editing
+
+Each HTML page is self-contained (styles and image data are embedded). Commit future changes to the relevant HTML pages. Avoid editing a second copy of the page outside the repository after publication.
