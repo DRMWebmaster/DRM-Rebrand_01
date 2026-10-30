@@ -19,17 +19,23 @@ function href(s){return /^https?:\/\//.test(s)?s:local(s)}
 function anchor(label,url,cls){const a=document.createElement("a");a.textContent=label;a.href=href(url);if(cls)a.className=cls;return a}
 const header=document.createElement("header");header.className="drm-site-header";header.setAttribute("data-drm-navigation","1");
 const shell=document.createElement("div");shell.className="drm-nav-shell";
-shell.appendChild(anchor("DENVER RESCUE MISSION","index.html","drm-brand"));
+const brand=anchor("","index.html","drm-brand");brand.setAttribute("aria-label","Denver Rescue Mission homepage");for(const word of ["DENVER","RESCUE","MISSION"]){const line=document.createElement("span");line.textContent=word;brand.appendChild(line)}shell.appendChild(brand);
 const toggle=document.createElement("button");toggle.type="button";toggle.className="drm-nav-toggle";toggle.setAttribute("aria-expanded","false");toggle.setAttribute("aria-controls","drm-main-nav");toggle.textContent="☰ Menu";shell.appendChild(toggle);
 const nav=document.createElement("nav");nav.className="drm-nav";nav.id="drm-main-nav";nav.setAttribute("aria-label","Main navigation");
-for(const [label,url,children] of links){const group=document.createElement("div");group.className="drm-nav-group";const main=anchor(label,url,"drm-nav-heading");group.appendChild(main);
+for(const [label,url,children] of links.slice(0,4)){const group=document.createElement("div");group.className="drm-nav-group drm-primary";const main=anchor(label,url,"drm-nav-heading");group.appendChild(main);
 if(children.length){main.insertAdjacentHTML("beforeend",'<span class="drm-nav-arrow" aria-hidden="true">⌄</span>');
 const drop=document.createElement("div");drop.className="drm-dropdown";drop.setAttribute("aria-label",label+" submenu");for(const [name,target] of children)drop.appendChild(anchor(name,target));group.appendChild(drop);
 main.addEventListener("click",e=>{if(matchMedia("(max-width:1100px)").matches){e.preventDefault();const wasOpen=group.classList.contains("is-open");nav.querySelectorAll(".drm-nav-group").forEach(g=>g.classList.remove("is-open"));group.classList.toggle("is-open",!wasOpen)}});
 group.addEventListener("keydown",e=>{if(e.key==="Escape"){group.classList.remove("is-open");main.focus()}});
 }
 nav.appendChild(group)}
-shell.appendChild(nav);shell.appendChild(anchor("Give Now",donate,"drm-nav-donate"));header.appendChild(shell);
+shell.appendChild(nav);
+const utilities=document.createElement("div");utilities.className="drm-nav-utilities";
+for(const [label,url] of links.slice(4)){utilities.appendChild(anchor(label,url))}
+const searchButton=document.createElement("button");searchButton.type="button";searchButton.className="drm-nav-search";searchButton.setAttribute("aria-label","Search website");searchButton.setAttribute("aria-expanded","false");searchButton.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg>';utilities.appendChild(searchButton);shell.appendChild(utilities);
+shell.appendChild(anchor("DONATE",donate,"drm-nav-donate"));header.appendChild(shell);
+const searchForm=document.createElement("form");searchForm.className="drm-search-form";searchForm.method="get";searchForm.action="https://denverrescuemission.org/";searchForm.setAttribute("role","search");const searchInput=document.createElement("input");searchInput.name="s";searchInput.type="search";searchInput.placeholder="Search Denver Rescue Mission";searchInput.setAttribute("aria-label","Search Denver Rescue Mission");const searchSubmit=document.createElement("button");searchSubmit.type="submit";searchSubmit.textContent="Search";searchForm.append(searchInput,searchSubmit);header.appendChild(searchForm);
+searchButton.addEventListener("click",()=>{const open=searchForm.classList.toggle("is-open");searchButton.setAttribute("aria-expanded",String(open));if(open)searchInput.focus()});
 toggle.addEventListener("click",()=>{const open=nav.classList.toggle("is-mobile-open");toggle.setAttribute("aria-expanded",String(open));toggle.textContent=open?"✕ Close":"☰ Menu"});
 const old=document.querySelector("header");if(old)old.replaceWith(header);else document.body.insertBefore(header,document.body.firstChild);
 const sheet=document.createElement("link");sheet.rel="stylesheet";sheet.href=local("assets/navigation.css");document.head.appendChild(sheet);
