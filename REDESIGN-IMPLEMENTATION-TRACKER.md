@@ -15,10 +15,10 @@ Status: In progress. Branch: `1.1`. No deployment requested. This file tracks im
 ### Stage A — Existing architecture (in progress)
 - [x] Add content architecture rules to `website-design-standards.html`.
 - [x] Implement first-pass needs-first entry cards in `get-help.html` (six visitor needs and existing prototype links).\n- [ ] Validate all Get Help destinations, hours, locations, and eligibility against current approved operational information before release.
-- [ ] Refine `what-we-do.html` to show strategies working together.
+- [x] Refine `what-we-do.html` to show strategies working together.
 - [ ] Review `index.html` for former four-strategy language and update the five-strategy introduction.
-- [ ] Review `our-programs.html`: program directory should not assign exclusive strategy buckets.
-- [ ] Update each `strategies/*.html` to explain the strategy across multiple programs.
+- [x] Review `our-programs.html`: program directory should not assign exclusive strategy buckets.
+- [x] Add cross-program strategy guidance to all five `strategies/*.html` pages.\n- [ ] Review each strategy page's remaining copy and visual presentation for consistency.
 - [ ] Update each `programs/*.html` with contextual 'How We Help You Move Forward' sections where accurately supported.
 
 ### Stage B — Who We Are / About (planned)
