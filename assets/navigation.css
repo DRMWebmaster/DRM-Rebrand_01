@@ -39,3 +39,8 @@
 .drm-site-header .drm-brand{display:flex;align-items:center;justify-content:flex-start;width:98px;min-width:98px;min-height:100px;font-size:0;letter-spacing:normal;overflow:hidden}
 .drm-site-header .drm-brand img{display:block;width:83px;max-width:100%;height:auto;max-height:88px;object-fit:contain}
 @media(max-width:1100px){.drm-site-header .drm-brand{width:76px;min-width:76px;min-height:64px}.drm-site-header .drm-brand img{width:67px;max-height:64px}}
+
+/* Give the official logo breathing room inside the shared header. */
+.drm-site-header .drm-brand{padding-top:12px;padding-bottom:12px;align-self:stretch;box-sizing:border-box}
+.drm-site-header .drm-brand img{max-height:76px}
+@media(max-width:1100px){.drm-site-header .drm-brand{padding-top:8px;padding-bottom:8px}.drm-site-header .drm-brand img{max-height:52px}}
