@@ -43,10 +43,10 @@ const sheet=document.createElement("link");sheet.rel="stylesheet";sheet.href=loc
 function cleanButtonArrows(){
  const items=document.querySelectorAll('a.btn,button.btn,a.button,button.button,a.button-primary,button.button-primary,a.cta-button,button.cta-button,a.drm-nav-donate,button[type="submit"],input[type="submit"],input[type="button"]');
  for(const el of items){
-   if(el.matches('input')){el.value=el.value.replace(/\\s*[↗↖↘↙→←➜➔➝➞❯›»]\\s*$/u,'').trimEnd();continue;}
+   if(el.matches('input')){el.value=el.value.replace(/\s*[↗↖↘↙→←➜➔➝➞❯›»]\s*$/u,'').trimEnd();continue;}
    const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
    let last=null;while(walker.nextNode())if(walker.currentNode.nodeValue.trim())last=walker.currentNode;
-   if(last)last.nodeValue=last.nodeValue.replace(/\\s*[↗↖↘↙→←➜➔➝➞❯›»]\\s*$/u,'').trimEnd();
+   if(last)last.nodeValue=last.nodeValue.replace(/\s*[↗↖↘↙→←➜➔➝➞❯›»]\s*$/u,'').trimEnd();
  }
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanButtonArrows,{once:true});
