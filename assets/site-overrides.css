@@ -82,7 +82,7 @@ body :is(.eyebrow,.kicker,.chapter-number,.section-label){font-size:clamp(15px,1
 :is(a,button).cta-button,
 :is(a,button).drm-nav-donate,
 :is(a,button).drm-nav-toggle,
-button[type="submit"],input[type="submit"],input[type="button"]{font-weight:400!important;}
+button[type="submit"],input[type="submit"],input[type="button"]{font-weight:400!important;text-transform:uppercase!important;}
 /* Remove decorative arrow pseudo-elements from CTA/button designs. */
 :is(.btn,.button,.button-primary,.cta-button,.drm-nav-donate)::after,
 :is(.btn,.button,.button-primary,.cta-button,.drm-nav-donate)::before{content:none!important;}
