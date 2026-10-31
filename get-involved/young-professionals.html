@@ -1,4 +1,344 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Young Professionals | Denver Rescue Mission — Concept</title><meta name="description" content="Young professionals can build community through service, advocacy and Mission engagement."><link rel="stylesheet" href="../assets/site-overrides.css"><style>:root{--blueberry:#202945;--water:#62B1BD;--red:#862633;--oatmeal:#F3F1EF}*{box-sizing:border-box}body{margin:0;color:var(--blueberry);font:17px/1.65 Arial,sans-serif}a{color:inherit}.wrap{max-width:1170px;width:calc(100% - 42px);margin:auto}.wide{max-width:1280px;width:calc(100% - 42px);margin:auto}header{background:white;border-bottom:1px solid #ddd}header .wide{display:flex;gap:21px;align-items:center;flex-wrap:wrap;padding:18px 0}header a{text-decoration:none;font-weight:800}header nav{display:flex;gap:19px;flex-wrap:wrap;font-size:14px}.brand{margin-right:auto}.donate{padding:10px 17px;background:var(--red);color:white}.hero{background:var(--blueberry);color:white;padding:95px 0 105px}.eyebrow{font-size:15px;letter-spacing:.13em;text-transform:uppercase;color:#b7e5e9;font-weight:800}.hero h1{max-width:940px;font-size:clamp(42px,6vw,76px);line-height:1.06;letter-spacing:-.04em;margin:14px 0 24px}.hero p{font-size:21px;max-width:820px}.btn{display:inline-block;background:var(--water);color:white;padding:13px 22px;text-decoration:none;font-weight:800}.section{padding:76px 0}.section h2{font-size:clamp(31px,4vw,48px);line-height:1.16}.context{background:var(--oatmeal);padding:30px;border-left:4px solid var(--red)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:34px 0}.tile{background:var(--oatmeal);border-top:4px solid var(--water);padding:25px;text-decoration:none;font-weight:bold;min-height:110px}.tile:hover{text-decoration:underline}.subscribe{background:var(--blueberry);color:white;padding:56px 0}.subgrid{display:grid;grid-template-columns:1fr 1fr;gap:45px}.subgrid h2{font-size:40px;line-height:1.15}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fields label{font-size:14px;font-weight:700}.fields label:last-child{grid-column:1/-1}.fields input{width:100%;padding:13px;display:block;border:1px solid #ccd;font:inherit}.subscribe button{background:var(--water);border:0;color:white;padding:13px 34px;margin-top:14px;font-weight:bold;cursor:pointer}footer{background:var(--oatmeal);padding:35px 0}footer .wrap{display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap;font-size:14px}@media(max-width:700px){.grid,.subgrid,.fields{grid-template-columns:1fr}.fields label:last-child{grid-column:auto}.hero{padding:62px 0}header nav{order:3}}</style><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Young Professionals | Denver Rescue Mission — Concept</title><link rel="stylesheet" href="../assets/site-overrides.css"><style>:root{--blueberry:#202945;--water:#62B1BD;--red:#862633;--oatmeal:#F3F1EF}*{box-sizing:border-box}body{margin:0;color:var(--blueberry);font:17px/1.65 Arial,sans-serif}a{color:inherit}.wrap{max-width:1170px;width:calc(100% - 42px);margin:auto}.wide{max-width:1280px;width:calc(100% - 42px);margin:auto}header{background:white;border-bottom:1px solid #ddd}header .wide{display:flex;gap:21px;align-items:center;flex-wrap:wrap;padding:18px 0}header a{text-decoration:none;font-weight:800}header nav{display:flex;gap:19px;flex-wrap:wrap;font-size:14px}.brand{margin-right:auto}.donate{padding:10px 17px;background:var(--red);color:white}.hero{background:var(--blueberry);color:white;padding:95px 0 105px}.eyebrow{font-size:15px;letter-spacing:.13em;text-transform:uppercase;color:#b7e5e9;font-weight:800}.hero h1{max-width:940px;font-size:clamp(42px,6vw,76px);line-height:1.06;letter-spacing:-.04em;margin:14px 0 24px}.hero p{font-size:21px;max-width:820px}.btn{display:inline-block;background:var(--water);color:white;padding:13px 22px;text-decoration:none;font-weight:800}.section{padding:76px 0}.section h2{font-size:clamp(31px,4vw,48px);line-height:1.16}.context{background:var(--oatmeal);padding:30px;border-left:4px solid var(--red)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:34px 0}.tile{background:var(--oatmeal);border-top:4px solid var(--water);padding:25px;text-decoration:none;font-weight:bold;min-height:110px}.tile:hover{text-decoration:underline}.subscribe{background:var(--blueberry);color:white;padding:56px 0}.subgrid{display:grid;grid-template-columns:1fr 1fr;gap:45px}.subgrid h2{font-size:40px;line-height:1.15}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fields label{font-size:14px;font-weight:700}.fields label:last-child{grid-column:1/-1}.fields input{width:100%;padding:13px;display:block;border:1px solid #ccd;font:inherit}.subscribe button{background:var(--water);border:0;color:white;padding:13px 34px;margin-top:14px;font-weight:bold;cursor:pointer}footer{background:var(--oatmeal);padding:35px 0}footer .wrap{display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap;font-size:14px}@media(max-width:700px){.grid,.subgrid,.fields{grid-template-columns:1fr}.fields label:last-child{grid-column:auto}.hero{padding:62px 0}header nav{order:3}}</style><style>
 /* Hero photograph from the corresponding live Mission page; hosted locally. */
 .hero{background:linear-gradient(90deg,rgba(32,41,69,.85),rgba(32,41,69,.45)),url('../assets/young-professionals-hero.webp') center top/cover no-repeat;background-color:#202945}
-</style></head><body><header><div class="wide"><a class="brand" href="../index.html">DENVER RESCUE MISSION</a><nav aria-label="Main navigation"><a href="../what-we-do.html">What We Do</a><a href="../who-we-are.html">Who We Are</a><a href="../get-involved.html">Get Involved</a><a href="../ways-to-give.html">Ways to Give</a><a href="../get-help.html">Get Help</a></nav><a class="donate" href="https://denverrescuemission.org/ways-to-give/">Donate Now</a></div></header><main><section class="hero"><div class="wrap"><div class="eyebrow">get involved / Design concept</div><h1>Connect, serve and lead</h1><p>Young professionals can build community through service, advocacy and Mission engagement.</p><a class="btn" href="#explore">Explore this page ↓</a></div></section><section class="section" id="explore"><div class="wrap"><h2>Young Professionals</h2><p style="font-size:21px;max-width:830px">Young professionals can build community through service, advocacy and Mission engagement.</p><div class="context"><strong>Connected approach:</strong> Prevention, Dignity, Recovery, Readiness and Housing describe overlapping strategies that help guide the Mission's work. Individual programs, service opportunities and giving choices may support more than one strategy. This prototype is subject to content and operational review.</div><h2>Explore related pages</h2><div class="grid"><a class="tile" href="../volunteer.html">Volunteer →</a><a class="tile" href="../what-we-do.html">What We Do →</a></div><a class="btn" href="https://denverrescuemission.org/">Visit current Mission website ↗</a></div></section><section class="subscribe"><div class="wrap subgrid"><div><div class="eyebrow">News & Stories</div><h2>Stay connected.</h2><p>Together, we can end homelessness, one life at a time. Sign up for emails from Denver Rescue Mission to receive our newsletter, stories of changed lives, and updates from across our community.</p></div><form onsubmit="event.preventDefault();this.querySelector('output').hidden=false"><div class="fields"><label>First Name<input name="first_name" autocomplete="given-name" required></label><label>Last Name<input name="last_name" autocomplete="family-name" required></label><label>Email<input type="email" name="email" autocomplete="email" required></label></div><button>Subscribe</button><output hidden style="display:block;font-size:13px">Design preview — subscription form not connected.</output></form></div></section></main><footer><div class="wrap"><span>Denver Rescue Mission — design concept, not an active service or donation page</span><a href="../website-design-standards.html">Website Design Standards</a><a href="../index.html">Home</a></div></footer><script src="../assets/navigation.js" defer></script></body></html>
+</style><link rel="stylesheet" href="../assets/page-content.css"></head><body><header><div class="wide"><a class="brand" href="../index.html">DENVER RESCUE MISSION</a><nav aria-label="Main navigation"><a href="../what-we-do.html">What We Do</a><a href="../who-we-are.html">Who We Are</a><a href="../get-involved.html">Get Involved</a><a href="../ways-to-give.html">Ways to Give</a><a href="../get-help.html">Get Help</a></nav><a class="donate" href="https://denverrescuemission.org/ways-to-give/">Donate Now</a></div></header><main><section class="hero"><div class="content-hero-inner"><div class="eyebrow">Get Involved</div><h1>Serve, Learn, Connect</h1></div></section>
+<div class="source-content">
+        <div>
+
+<div>
+	<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<p>Denver Rescue Mission’s Young Professionals group is seeking passionate individuals to join its growing network of influencers. As the next generation of leaders, our goal is to help people who are experiencing homelessness and addiction in our city change their lives.</p>
+
+
+
+<p>We strive to make an impact through hands-on volunteering, learning about current issues affecting homelessness, engaging in events and networking, and connecting with our greater Denver community. Come serve, learn and connect with us!</p>
+
+
+
+<div></div>
+
+
+
+<figure><div>
+<div><iframe title="Young Professionals Denver Rescue Mission" src="https://player.vimeo.com/video/869203863?dnt=1&amp;app_id=122963" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" loading="lazy" class="content-video"></iframe></div>
+</div></figure>
+</div></div>
+
+</div></div>
+
+
+
+
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<h2>Serve</h2>
+
+
+
+<ul>
+<li>Join us for a recurring opportunity to prepare and serve meals to people in need</li>
+
+
+
+<li>Meet the needs of the men, women, and children served by Denver Rescue Mission in other diverse ways</li>
+
+
+
+<li>Sustain the life-changing work happening throughout the Mission </li>
+</ul>
+</div></div>
+
+
+
+<div class="content-column"><div>
+<h2>Learn</h2>
+
+
+
+<ul>
+<li>Hear from experts on homelessness-related topics</li>
+
+
+
+<li>Gain a greater understanding of how to make a difference</li>
+</ul>
+</div></div>
+
+
+
+<div class="content-column"><div>
+<h2>Connect</h2>
+
+
+
+<ul>
+<li>Network with other young professionals in the Denver area</li>
+
+
+
+<li>Become a Denver Rescue Mission ambassador and spark change with others in your community </li>
+</ul>
+</div></div>
+
+</div></div>
+
+
+
+<div class="content-group"><div></div><div class="content-columns">
+
+<div class="content-column"><div><div id="signup" class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<h2>Sign Up to Join Us Today!</h2>
+
+
+
+<p>Signing up is simple, and we’ll instantly get you connected to other young professionals that are committed to serving people experiencing homelessness in Denver. We offer two levels of engagement, so select the type of membership that interests you below to get started.</p>
+</div></div>
+
+</div></div>
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<figure><img src="https://denverrescuemission.org/wp-content/uploads/2021/05/2105_YP_Membership_demo-2.webp" alt="" loading="lazy"></figure>
+
+
+
+<div></div>
+
+
+
+<h3>Impact Members</h3>
+
+
+
+<p>Impact members have a recurring monthly gift, enjoying all the benefits of social members as well as other exclusive opportunities.</p>
+
+
+
+<div></div>
+
+
+
+<div><a href="https://go.denverrescuemission.org/l/810463/2021-06-07/zmr6d">Become an Impact Member</a></div>
+</div></div>
+
+
+
+<div class="content-column"><div>
+<figure><img src="https://denverrescuemission.org/wp-content/uploads/2023/12/join-young-professionals-5.webp" alt="Join Young Professionals 9" loading="lazy"></figure>
+
+
+
+<div></div>
+
+
+
+<h3>Social Members</h3>
+
+
+
+<p>Social members are invited to volunteering, social and fundraising opportunities throughout the year, but miss out on special events reserved for Impact members.</p>
+
+
+
+<div></div>
+
+
+
+<div><a href="https://go.denverrescuemission.org/l/810463/2021-07-12/2355qh">Become a Social Member</a></div>
+</div></div>
+
+</div></div></div></div>
+
+</div></div>
+
+<div class="content-group"><div></div><div></div><div></div><div class="content-columns">
+
+<div class="content-column"><div><div id="signup" class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<h2>Check Out Upcoming Events</h2>
+
+
+
+<p>Join Denver Rescue Mission’s Young Professionals for impactful, free events that bring learning, connection, and action together.</p>
+
+
+
+<div><a href="https://denverrescuemission.org/ypevents">View Events</a></div>
+</div></div>
+
+</div></div></div></div>
+
+</div></div>
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<h2>Leadership Members</h2>
+
+
+
+<p>Leadership members are volunteers selected to serve as the managing member of different topics related to YP, including but not limited to Communications, Events, Education, or Fundraising.</p>
+</div></div>
+
+</div></div>
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>	<article id="tout-block_49343c3ac665ccaff9be86f5696dfef0">
+		<div><img src="https://denverrescuemission.org/wp-content/uploads/2026/03/Ryan-Brost_WEB.webp" loading="lazy" alt=""></div>
+		<div>
+			<header><h3>Ryan Brost</h3></header>
+			<div><p><em>Principal Software Engineer</em></p>
+</div>
+
+		</div> </article> </div></div>
+
+
+
+<div class="content-column"><div>	<article id="tout-block_ab687878e3d0ebfc9853a7c979059563">
+		<div><img src="https://denverrescuemission.org/wp-content/uploads/2024/10/Mariah-Chere.webp" loading="lazy" alt=""></div>
+		<div>
+			<header><h3>Mariah Chere</h3></header>
+			<div><p><em>Owner of Magnify With Mariah</em></p>
+</div>
+
+		</div> </article> </div></div>
+
+
+
+<div class="content-column"><div>	<article id="tout-block_6cac901ab7a090e755ade7c9f45b2f86">
+		<div><img src="https://denverrescuemission.org/wp-content/uploads/2026/03/Mike-DeHaan_WEB.webp" loading="lazy" alt=""></div>
+		<div>
+			<header><h3>Mike DeHaan</h3></header>
+			<div><p><em>Renewals Sales Specialist – Retail, Adobe</em></p>
+</div>
+
+		</div> </article> </div></div>
+
+
+
+<div class="content-column"><div>	<article id="tout-block_28d0c277d24e4758d138bdf2defd5167">
+		<div><img src="https://denverrescuemission.org/wp-content/uploads/2024/10/Kori-Eckert_WEB.webp" loading="lazy" alt=""></div>
+		<div>
+			<header><h3>Kori Eckert</h3></header>
+			<div><p><em>Senior Recruiter at Hydrogen Group</em></p>
+</div>
+
+		</div> </article> </div></div>
+
+</div></div>
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>	<article id="tout-block_13c935530d0eae2cdb00cb8fd5515762">
+		<div><img src="https://denverrescuemission.org/wp-content/uploads/2026/03/Lauren-Knobbe_WEB.webp" loading="lazy" alt=""></div>
+		<div>
+			<header><h3>Lauren Knobbe</h3></header>
+			<div><p><em>SVP, Client Operations, Vivvi</em></p>
+</div>
+
+		</div> </article> </div></div>
+
+
+
+<div class="content-column"><div>	<article id="tout-block_68e0ae0f50a66ec5775cca2c699aa4a9">
+		<div><img src="https://denverrescuemission.org/wp-content/uploads/2024/10/Rachel-Langholz_WEB.webp" loading="lazy" alt=""></div>
+		<div>
+			<header><h3>Rachel Langholz</h3></header>
+			<div><p><em>Director of Growth Strategy at Davita Kidney Care</em></p>
+</div>
+
+		</div> </article> </div></div>
+
+
+
+<div class="content-column"><div>	<article id="tout-block_db0f47cbe9127327e989dfa95decdcd0">
+		<div><img src="https://denverrescuemission.org/wp-content/uploads/2026/03/Milana-Morozova_WEB_2.webp" loading="lazy" alt=""></div>
+		<div>
+			<header><h3>Milana Morozova</h3></header>
+			<div><p><em>Operations Analyst, Executive Search, Flagship Pioneering</em></p>
+</div>
+
+		</div> </article> </div></div>
+
+
+
+<div class="content-column"><div>	<article id="tout-block_93ca6db01c986739ae3197df5c8a9741">
+		<div><img src="https://denverrescuemission.org/wp-content/uploads/2024/09/Mauri-Resseguie_CD_0268_WEB.webp" loading="lazy" alt=""></div>
+		<div>
+			<header><h3>Mauri Resseguie</h3></header>
+			<div><p>YP Chair, Board Member</p>
+<p><em>Loan Operations Manager at Fortis Bank</em></p>
+</div>
+
+		</div> </article> </div></div>
+
+</div></div>
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>	<article id="tout-block_62456bc61e9c02bda63ab3f98c93911d">
+		<div><img src="https://denverrescuemission.org/wp-content/uploads/2026/03/Nick-Sammons_WEB.webp" loading="lazy" alt=""></div>
+		<div>
+			<header><h3>Nick Sammons</h3></header>
+			<div><p><em> Project Engineer, Sky Blue Builders</em></p>
+</div>
+
+		</div> </article> </div></div>
+
+
+
+<div class="content-column"><div>	<article id="tout-block_3512ec9bba91026af3b762b1dc7c951d">
+		<div><img src="https://denverrescuemission.org/wp-content/uploads/2026/03/Emily-Staples_WEB.webp" loading="lazy" alt=""></div>
+		<div>
+			<header><h3>Emily Staples</h3></header>
+			<div><p><em>Snr. Renewal Sales Specialist – Health &amp; Life Sciences, Adobe</em></p>
+</div>
+
+		</div> </article> </div></div>
+
+
+
+<div class="content-column"><div>	<article id="tout-block_c9220c0275aa287e7ea9aecc2f7e2547">
+		<div><img src="https://denverrescuemission.org/wp-content/uploads/2024/10/Nicole-Walters_WEB.webp" loading="lazy" alt=""></div>
+		<div>
+			<header><h3>Nicole Walters</h3></header>
+			<div><p><em>Oncology Float Pharmacist at UC Health</em></p>
+</div>
+
+		</div> </article> </div></div>
+
+
+
+<div class="content-column"><div></div></div>
+
+</div></div>
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div><div id="yp-new" class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<h2>Any Questions?</h2>
+
+
+
+<p>We’d love to hear from you! Whether you’re interested in getting involved, learning more about the Mission, or have any other inquiries, feel free to reach out to YP@DenRescue.org. Our team is here to help!</p>
+</div></div>
+
+</div></div></div></div>
+
+</div></div>
+
+
+
+</div></div> </div>
+<section class="content-newsletter"><div class="content-newsletter-inner"><div><p class="eyebrow">News &amp; Stories</p><h2>Stay connected.</h2><p>Connect with us to get the latest news from Denver Rescue Mission.</p></div><p><a href="https://go.denverrescuemission.org/l/810463/2019-11-11/2mq">Sign up for emails</a></p></div></section></main><footer><div class="wrap"><span>Denver Rescue Mission — design concept, not an active service or donation page</span><a href="../website-design-standards.html">Website Design Standards</a><a href="../index.html">Home</a></div></footer><script src="../assets/navigation.js" defer></script></body></html>

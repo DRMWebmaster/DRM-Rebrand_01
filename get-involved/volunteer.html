@@ -1,4 +1,337 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Volunteer | Denver Rescue Mission — Concept</title><meta name="description" content="Explore meaningful opportunities to serve. Available roles, ages, scheduling and requirements should be confirmed on the current volunteer site."><link rel="stylesheet" href="../assets/site-overrides.css"><style>:root{--blueberry:#202945;--water:#62B1BD;--red:#862633;--oatmeal:#F3F1EF}*{box-sizing:border-box}body{margin:0;color:var(--blueberry);font:17px/1.65 Arial,sans-serif}a{color:inherit}.wrap{max-width:1170px;width:calc(100% - 42px);margin:auto}.wide{max-width:1280px;width:calc(100% - 42px);margin:auto}header{background:white;border-bottom:1px solid #ddd}header .wide{display:flex;gap:21px;align-items:center;flex-wrap:wrap;padding:18px 0}header a{text-decoration:none;font-weight:800}header nav{display:flex;gap:19px;flex-wrap:wrap;font-size:14px}.brand{margin-right:auto}.donate{padding:10px 17px;background:var(--red);color:white}.hero{background:var(--blueberry);color:white;padding:95px 0 105px}.eyebrow{font-size:15px;letter-spacing:.13em;text-transform:uppercase;color:#b7e5e9;font-weight:800}.hero h1{max-width:940px;font-size:clamp(42px,6vw,76px);line-height:1.06;letter-spacing:-.04em;margin:14px 0 24px}.hero p{font-size:21px;max-width:820px}.btn{display:inline-block;background:var(--water);color:white;padding:13px 22px;text-decoration:none;font-weight:800}.section{padding:76px 0}.section h2{font-size:clamp(31px,4vw,48px);line-height:1.16}.context{background:var(--oatmeal);padding:30px;border-left:4px solid var(--red)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:34px 0}.tile{background:var(--oatmeal);border-top:4px solid var(--water);padding:25px;text-decoration:none;font-weight:bold;min-height:110px}.tile:hover{text-decoration:underline}.subscribe{background:var(--blueberry);color:white;padding:56px 0}.subgrid{display:grid;grid-template-columns:1fr 1fr;gap:45px}.subgrid h2{font-size:40px;line-height:1.15}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fields label{font-size:14px;font-weight:700}.fields label:last-child{grid-column:1/-1}.fields input{width:100%;padding:13px;display:block;border:1px solid #ccd;font:inherit}.subscribe button{background:var(--water);border:0;color:white;padding:13px 34px;margin-top:14px;font-weight:bold;cursor:pointer}footer{background:var(--oatmeal);padding:35px 0}footer .wrap{display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap;font-size:14px}@media(max-width:700px){.grid,.subgrid,.fields{grid-template-columns:1fr}.fields label:last-child{grid-column:auto}.hero{padding:62px 0}header nav{order:3}}</style><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Volunteer | Denver Rescue Mission — Concept</title><link rel="stylesheet" href="../assets/site-overrides.css"><style>:root{--blueberry:#202945;--water:#62B1BD;--red:#862633;--oatmeal:#F3F1EF}*{box-sizing:border-box}body{margin:0;color:var(--blueberry);font:17px/1.65 Arial,sans-serif}a{color:inherit}.wrap{max-width:1170px;width:calc(100% - 42px);margin:auto}.wide{max-width:1280px;width:calc(100% - 42px);margin:auto}header{background:white;border-bottom:1px solid #ddd}header .wide{display:flex;gap:21px;align-items:center;flex-wrap:wrap;padding:18px 0}header a{text-decoration:none;font-weight:800}header nav{display:flex;gap:19px;flex-wrap:wrap;font-size:14px}.brand{margin-right:auto}.donate{padding:10px 17px;background:var(--red);color:white}.hero{background:var(--blueberry);color:white;padding:95px 0 105px}.eyebrow{font-size:15px;letter-spacing:.13em;text-transform:uppercase;color:#b7e5e9;font-weight:800}.hero h1{max-width:940px;font-size:clamp(42px,6vw,76px);line-height:1.06;letter-spacing:-.04em;margin:14px 0 24px}.hero p{font-size:21px;max-width:820px}.btn{display:inline-block;background:var(--water);color:white;padding:13px 22px;text-decoration:none;font-weight:800}.section{padding:76px 0}.section h2{font-size:clamp(31px,4vw,48px);line-height:1.16}.context{background:var(--oatmeal);padding:30px;border-left:4px solid var(--red)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:34px 0}.tile{background:var(--oatmeal);border-top:4px solid var(--water);padding:25px;text-decoration:none;font-weight:bold;min-height:110px}.tile:hover{text-decoration:underline}.subscribe{background:var(--blueberry);color:white;padding:56px 0}.subgrid{display:grid;grid-template-columns:1fr 1fr;gap:45px}.subgrid h2{font-size:40px;line-height:1.15}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fields label{font-size:14px;font-weight:700}.fields label:last-child{grid-column:1/-1}.fields input{width:100%;padding:13px;display:block;border:1px solid #ccd;font:inherit}.subscribe button{background:var(--water);border:0;color:white;padding:13px 34px;margin-top:14px;font-weight:bold;cursor:pointer}footer{background:var(--oatmeal);padding:35px 0}footer .wrap{display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap;font-size:14px}@media(max-width:700px){.grid,.subgrid,.fields{grid-template-columns:1fr}.fields label:last-child{grid-column:auto}.hero{padding:62px 0}header nav{order:3}}</style><style>
 /* Hero photograph from the corresponding live Mission page; hosted locally. */
 .hero{background:linear-gradient(90deg,rgba(32,41,69,.85),rgba(32,41,69,.45)),url('../assets/volunteer-hero.webp') center 20%/cover no-repeat;background-color:#202945}
-</style></head><body><header><div class="wide"><a class="brand" href="../index.html">DENVER RESCUE MISSION</a><nav aria-label="Main navigation"><a href="../what-we-do.html">What We Do</a><a href="../who-we-are.html">Who We Are</a><a href="../get-involved.html">Get Involved</a><a href="../ways-to-give.html">Ways to Give</a><a href="../get-help.html">Get Help</a></nav><a class="donate" href="https://denverrescuemission.org/ways-to-give/">Donate Now</a></div></header><main><section class="hero"><div class="wrap"><div class="eyebrow">get involved / Design concept</div><h1>Serve alongside your neighbors</h1><p>Explore meaningful opportunities to serve. Available roles, ages, scheduling and requirements should be confirmed on the current volunteer site.</p><a class="btn" href="#explore">Explore this page ↓</a></div></section><section class="section" id="explore"><div class="wrap"><h2>Volunteer</h2><p style="font-size:21px;max-width:830px">Explore meaningful opportunities to serve. Available roles, ages, scheduling and requirements should be confirmed on the current volunteer site.</p><div class="context"><strong>Connected approach:</strong> Prevention, Dignity, Recovery, Readiness and Housing describe overlapping strategies that help guide the Mission's work. Individual programs, service opportunities and giving choices may support more than one strategy. This prototype is subject to content and operational review.</div><h2>Explore related pages</h2><div class="grid"><a class="tile" href="../what-we-do.html">What We Do →</a><a class="tile" href="../get-help.html">Get Help →</a></div><a class="btn" href="https://denverrescuemission.org/">Visit current Mission website ↗</a></div></section><section class="subscribe"><div class="wrap subgrid"><div><div class="eyebrow">News & Stories</div><h2>Stay connected.</h2><p>Together, we can end homelessness, one life at a time. Sign up for emails from Denver Rescue Mission to receive our newsletter, stories of changed lives, and updates from across our community.</p></div><form onsubmit="event.preventDefault();this.querySelector('output').hidden=false"><div class="fields"><label>First Name<input name="first_name" autocomplete="given-name" required></label><label>Last Name<input name="last_name" autocomplete="family-name" required></label><label>Email<input type="email" name="email" autocomplete="email" required></label></div><button>Subscribe</button><output hidden style="display:block;font-size:13px">Design preview — subscription form not connected.</output></form></div></section></main><footer><div class="wrap"><span>Denver Rescue Mission — design concept, not an active service or donation page</span><a href="../website-design-standards.html">Website Design Standards</a><a href="../index.html">Home</a></div></footer><script src="../assets/navigation.js" defer></script></body></html>
+</style><link rel="stylesheet" href="../assets/page-content.css"></head><body><header><div class="wide"><a class="brand" href="../index.html">DENVER RESCUE MISSION</a><nav aria-label="Main navigation"><a href="../what-we-do.html">What We Do</a><a href="../who-we-are.html">Who We Are</a><a href="../get-involved.html">Get Involved</a><a href="../ways-to-give.html">Ways to Give</a><a href="../get-help.html">Get Help</a></nav><a class="donate" href="https://denverrescuemission.org/ways-to-give/">Donate Now</a></div></header><main><section class="hero"><div class="content-hero-inner"><div class="eyebrow">Get Involved</div><h1>Volunteer</h1></div></section>
+<div class="source-content">
+        <div>
+
+<div>
+
+<div id="kt-modal19708_632262-da"><h3>Learn More</h3></div>
+
+
+
+<div id="kt-modal19708_5ea692-73"><h3>Learn More</h3></div>
+
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<p>Thank you for your interest in volunteering at Denver Rescue Mission! Volunteers like you make all our programs and services possible, every single day. Meal service, mentoring a program participant or youth, helping sort donations, and more are all amazing things you can do volunteering at the Mission.</p>
+
+
+
+<p><a href="#opportunities">Volunteer as an Individual ›</a></p>
+<p><a href="#group">Volunteer With a Group ›</a></p>
+</div></div>
+
+
+
+<div class="content-column"><div>
+<figure><div>
+<div><iframe title="Thank You Volunteers" src="https://www.youtube.com/embed/Uxob6ooHmu0?feature=oembed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" class="content-video"></iframe></div>
+</div></figure>
+</div></div>
+
+</div></div>
+
+
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div></div></div>
+
+</div></div>
+
+<div id="opportunities" class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<h2>Find an Opportunity</h2>
+</div></div>
+
+</div></div>
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<div><div><div><img src="https://denverrescuemission.org/wp-content/uploads/2021/03/volunteer-22.webp" alt="Volunteer 19" loading="lazy"><div><div></div></div><a href="https://volunteer.denverrescuemission.org/volunteers/s/meals"><div><div><h3>Meals</h3></div></div></a></div></div></div>
+</div></div>
+
+
+
+<div class="content-column"><div>
+<div><div><div><img src="https://denverrescuemission.org/wp-content/uploads/2021/03/volunteer-26.webp" alt="Volunteer 23" loading="lazy"><div><div></div></div><a href="https://volunteer.denverrescuemission.org/volunteers/s/warehouse-support"><div><div><h3>Warehouse Support</h3></div></div></a></div></div></div>
+</div></div>
+
+
+
+<div class="content-column"><div>
+<div><div><div><img loading="lazy" src="https://denverrescuemission.org/wp-content/uploads/2021/03/volunteer-27.webp" alt="Volunteer 24"><div><div></div></div><a href="https://volunteer.denverrescuemission.org/volunteers/s/youth"><div><div><h3>Youth</h3></div></div></a></div></div></div>
+</div></div>
+
+</div></div>
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<div><div><div><img loading="lazy" src="https://denverrescuemission.org/wp-content/uploads/2021/03/volunteer-18.webp" alt="Volunteer 15"><div><div></div></div><a href="https://volunteer.denverrescuemission.org/volunteers/s/administrative"><div><div><h3>Administrative</h3></div></div></a></div></div></div>
+</div></div>
+
+
+
+<div class="content-column"><div>
+<div><div><div><img loading="lazy" src="https://denverrescuemission.org/wp-content/uploads/2021/03/volunteer-19.webp" alt="Volunteer 16"><div><div></div></div><a href="https://volunteer.denverrescuemission.org/volunteers/s/court-ordered-community-service"><div><div><h3>Court-Ordered Community Service</h3></div></div></a></div></div></div>
+</div></div>
+
+
+
+<div class="content-column"><div>
+<div><div><div><img loading="lazy" src="https://denverrescuemission.org/wp-content/uploads/2021/03/volunteer-31.webp" alt="Volunteer 28"><div><div></div></div><a href="https://volunteer.denverrescuemission.org/volunteers/s/education-job-skills"><div><div><h3>Education &amp; Life Skills</h3></div></div></a></div></div></div>
+</div></div>
+
+</div></div>
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<div><div><div><img loading="lazy" src="https://denverrescuemission.org/wp-content/uploads/2023/10/volunteer-58.webp" alt="Volunteer 55"><div><div></div></div><a href="https://volunteer.denverrescuemission.org/volunteers/s/special-projects"><div><div><h3>Special Projects</h3></div></div></a></div></div></div>
+</div></div>
+
+
+
+<div class="content-column"><div>
+<div><div><div><img loading="lazy" src="https://denverrescuemission.org/wp-content/uploads/2021/03/volunteer-24.webp" alt="Volunteer 21"><div><div></div></div><a href="https://volunteer.denverrescuemission.org/volunteers/s/spiritual"><div><div><h3>Spiritual</h3></div></div></a></div></div></div>
+</div></div>
+
+
+
+<div class="content-column"><div>
+<div><div><div><img loading="lazy" src="https://denverrescuemission.org/wp-content/uploads/2021/03/volunteer-25.webp" alt="Volunteer 22"><div><div></div></div><a href="https://volunteer.denverrescuemission.org/volunteers/s/vocational"><div><div><h3>Vocational</h3></div></div></a></div></div></div>
+</div></div>
+
+</div></div>
+
+
+<div id="kt-modal19708_234bda-52"><div id="groups"><div><div><div id="kt-modal19708_234bda-52-content">
+<h2>How Does Your Group Want to Serve?</h2>
+
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<div><div><div><img src="https://denverrescuemission.org/wp-content/uploads/2021/03/volunteer-22.webp" alt="Volunteer 19" loading="lazy"><div><div></div></div><a href="https://volunteer.denverrescuemission.org/volunteers/s/meals"><div><div><h3>Meals</h3></div></div></a></div></div></div>
+</div></div>
+
+
+
+<div class="content-column"><div>
+<div><div><div><img src="https://denverrescuemission.org/wp-content/uploads/2021/03/volunteer-26.webp" alt="Volunteer 23" loading="lazy"><div><div></div></div><a href="https://volunteer.denverrescuemission.org/volunteers/s/warehouse-support"><div><div><h3>Warehouse Support</h3></div></div></a></div></div></div>
+</div></div>
+
+</div></div>
+
+
+<p>Have a large group, or looking for other ways to serve? <a href="https://denverrescuemission.org/contact">Contact us to learn more</a>.</p>
+</div></div></div></div><h3>Learn More</h3></div>
+
+
+<div id="volunteerbenefits" class="content-group"><div class="content-columns">
+
+<div class="content-column"><div><div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<h2>Volunteering Has Its Perks…</h2>
+
+
+
+<p>Search for your employer below to find out if they offer any volunteer benefits. Some employers may even offer paid time off in exchange for volunteering in your community!</p>
+
+
+
+  <div id="dd-container"> <a href="https://doublethedonation.com/matching-grant-resources/matching-gift-basics/">Matching Gift</a> and <a href="https://doublethedonation.com/matching-grant-resources/volunteer-grant-basics/">Volunteer Grant</a> information provided by <br> <a href="https://doublethedonation.com"></a> </div>
+
+
+
+<div></div>
+
+
+
+<p><em>Don’t see your employer listed? Talk to them about what a volunteer or matching gift program could look like.</em></p>
+</div></div>
+
+</div></div></div></div>
+
+</div></div>
+
+<div id="group" class="content-group"><div></div><div class="content-columns">
+
+<div class="content-column"><div><div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<h2>Volunteer With a Group</h2>
+
+
+
+<p>Groups of 2 to 10 people can volunteer for a variety of opportunities, but our greatest need for groups is in serving meals and assisting with warehouse support at our Ministry Outreach Center. Thank you for joining us to change lives together.</p>
+
+
+
+<div><a href="https://volunteer.denverrescuemission.org/volunteers/s/groups">Sign Up Your Group</a></div>
+</div></div>
+
+
+
+<div class="content-column"><div></div></div>
+
+</div></div></div></div>
+
+</div></div>
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div><div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div></div></div>
+
+
+
+<div class="content-column"><div>
+<h2>You Can Be a Change Maker</h2>
+
+
+
+<p>Change Makers are volunteers who want to partner with us by investing deeper in the lives of those experiencing homelessness and poverty.</p>
+
+
+
+<div><a href="https://volunteer.denverrescuemission.org/volunteers/s/change-makers">Become a Change Maker</a></div>
+</div></div>
+
+</div></div></div></div>
+
+</div></div>
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<h2>Frequently Asked Questions</h2>
+
+
+<div class="content-group"><div class="content-columns">
+
+<div class="content-column"><div>
+<div><div><div>
+<div><div><h3 class="content-question">What type of volunteer opportunities are available for individuals?</h3></div><div><div>
+<p>We have three main types of volunteer opportunities:</p>
+
+
+
+<ul>
+<li><strong>Short-Term:</strong> Serving meals, warehouse support, court-ordered community service, and more.</li>
+
+
+
+<li><strong>Change Makers:</strong> Volunteers who serve on a regular basis working with adults or youth, teaching job skills, providing spiritual services, and more.</li>
+
+
+
+<li><strong>Internships</strong> Fall, spring, and summer start dates are available.</li>
+</ul>
+
+
+
+<p>Use the categories above to find an opportunity you’re interested in. </p>
+</div></div></div>
+
+
+
+<div><div><h3 class="content-question">What volunteer opportunities are available for groups?</h3></div><div><div>
+<p>Group opportunities for 2-10 people are available for meals, and groups of 2-5 are welcome to serve through warehouse support opportunities. Select the Groups category above to find an opportunity that’s right for you. </p>
+</div></div></div>
+
+
+
+<div><div><h3 class="content-question">Are there age restrictions for meal service volunteer opportunities?</h3></div><div><div>
+<p>Age requirements for meal service volunteers varies depending on the facility where you are volunteering. All volunteers under the age of 18 must be accompanied by someone who is 18 or older (parent/guardian, family member, youth pastor, etc.).</p>
+
+
+
+<ul>
+<li><strong>At The Crossing,</strong> the minimum age for meal service volunteers is 12 years old.</li>
+
+
+
+<li><strong>At the Lawrence Street Community Center,</strong> the minimum age for meal service volunteers is 14 years old</li>
+
+
+
+<li><strong>At 48th Avenue Center,</strong> the minimum age for meal service volunteers is 14 years old</li>
+
+
+
+<li><strong>At the Ministry Outreach Center,</strong> the minimum age for volunteering is 16 years old.</li>
+
+
+
+<li><strong>At Fort Collins Rescue Mission,</strong> the minimum age for meal service volunteers is 16 years old.</li>
+</ul>
+
+
+
+<p><em>Please do not bring family members or guests with you who are under the minimum age requirements for the facility where you will be serving.</em></p>
+</div></div></div>
+
+
+
+<div><div><h3 class="content-question">Who do I contact if I have questions about volunteering?</h3></div><div><div>
+<p>If you have questions please <a href="https://denverrescuemission.org/contact">contact us online</a>.</p>
+
+
+
+<p>If you have a question about an opportunity or scheduling, please contact our Volunteer Services team at 303.953.3955 or the contact person associated with the volunteer position.</p>
+</div></div></div>
+
+
+
+<div><div><h3 class="content-question">How far in advance can I sign up for a meal service volunteer opportunity?</h3></div><div><div>
+<p>You may sign up for meal service 45 days in advance. Select Meals above to get started.</p>
+</div></div></div>
+
+
+
+<div><div><h3 class="content-question">Can I complete court-ordered community service at Denver Rescue Mission?</h3></div><div><div>
+<p>Court-ordered community service can be completed through select volunteer opportunities at the Mission. All court ordered volunteers must apply and be approved before beginning service. Please select Court-Ordered Community Service from the categories above to see available opportunities. If there is not an application available that means that the opportunity is full at that time.</p>
+</div></div></div>
+
+
+
+<div><div><h3 class="content-question">Can I bring my Emotional Support Animal or Service Animal to volunteer?</h3></div><div><div>
+<p>Emotional Support Animals are not permitted while volunteering at Denver Rescue Mission. Service Animals are permitted. Volunteers who wish to bring their Service Animal should contact Volunteer Services at Volunteer@DenRescue.org at least one week prior to their scheduled volunteer date to complete the necessary documents. No animals should ever be left unattended in vehicles during a volunteer shift.</p>
+</div></div></div>
+
+
+
+<div><div><h3 class="content-question">What if my volunteer shift search does not give me results?</h3></div><div><div>
+<p>If you are unable find a volunteer shift based off your search criteria it is possible we don’t have any available shifts that match your desired location or date. Once a shift is filled, it will no longer appear on the website. Shifts are typically released 45-60 days in advance. Please reach out to us at 303.953.3955 if you need assistance with scheduling a shift.</p>
+</div></div></div>
+</div></div></div>
+</div></div>
+
+</div></div></div></div>
+
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div> </div>
+<div class="content-review"><p><a href="https://denverrescuemission.org/volunteer/">Check your employer’s volunteer matching program on the Mission’s live website</a>.</p></div><section class="content-newsletter"><div class="content-newsletter-inner"><div><p class="eyebrow">News &amp; Stories</p><h2>Stay connected.</h2><p>Connect with us to get the latest news from Denver Rescue Mission.</p></div><p><a href="https://go.denverrescuemission.org/l/810463/2019-11-11/2mq">Sign up for emails</a></p></div></section></main><footer><div class="wrap"><span>Denver Rescue Mission — design concept, not an active service or donation page</span><a href="../website-design-standards.html">Website Design Standards</a><a href="../index.html">Home</a></div></footer><script src="../assets/navigation.js" defer></script></body></html>
