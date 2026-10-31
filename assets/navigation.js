@@ -51,4 +51,5 @@ function cleanButtonArrows(){
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanButtonArrows,{once:true});
 else cleanButtonArrows();
+const dividerScript=document.createElement("script");dividerScript.src=local("assets/section-dividers.js");dividerScript.defer=true;document.head.appendChild(dividerScript);
 })();
