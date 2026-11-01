@@ -16,40 +16,32 @@ const links=[
 ["Get Help","get-help.html",[]]
 ];
 function href(s){return /^https?:\/\//.test(s)?s:local(s)}
-function anchor(label,url,cls){const a=document.createElement("a");a.textContent=label;a.href=href(url);if(cls)a.className=cls;return a}
-const header=document.createElement("header");header.className="drm-site-header";header.setAttribute("data-drm-navigation","1");
-const shell=document.createElement("div");shell.className="drm-nav-shell";
-const brand=anchor("","index.html","drm-brand");brand.setAttribute("aria-label","Denver Rescue Mission homepage");const logo=document.createElement("img");logo.src=local("assets/DRM_logo.svg");logo.alt="Denver Rescue Mission";logo.width=101;logo.height=90;brand.appendChild(logo);shell.appendChild(brand);
-const toggle=document.createElement("button");toggle.type="button";toggle.className="drm-nav-toggle";toggle.setAttribute("aria-expanded","false");toggle.setAttribute("aria-controls","drm-main-nav");toggle.textContent="☰ Menu";shell.appendChild(toggle);
-const nav=document.createElement("nav");nav.className="drm-nav";nav.id="drm-main-nav";nav.setAttribute("aria-label","Main navigation");
-for(const [label,url,children] of links.slice(0,4)){const group=document.createElement("div");group.className="drm-nav-group drm-primary";const main=anchor(label,url,"drm-nav-heading");group.appendChild(main);
-if(children.length){main.insertAdjacentHTML("beforeend",'<span class="drm-nav-arrow" aria-hidden="true">⌄</span>');
-const drop=document.createElement("div");drop.className="drm-dropdown";drop.setAttribute("aria-label",label+" submenu");for(const [name,target] of children)drop.appendChild(anchor(name,target));group.appendChild(drop);
-main.addEventListener("click",e=>{if(matchMedia("(max-width:1100px)").matches){e.preventDefault();const wasOpen=group.classList.contains("is-open");nav.querySelectorAll(".drm-nav-group").forEach(g=>g.classList.remove("is-open"));group.classList.toggle("is-open",!wasOpen)}});
-group.addEventListener("keydown",e=>{if(e.key==="Escape"){group.classList.remove("is-open");main.focus()}});
+function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text)n.textContent=text;return n}
+function anchor(label,url,cls){const n=el('a',cls,label);n.href=href(url);if(n.origin===location.origin&&n.pathname===location.pathname)n.setAttribute('aria-current','page');return n}
+const header=el('header','drm-site-header');header.dataset.drmNavigation='1';
+const skip=el('a','drm-skip-link','Skip to content');skip.href='#main';header.append(skip);
+const shell=el('div','drm-nav-shell');const brand=anchor('','index.html','drm-brand');brand.setAttribute('aria-label','Denver Rescue Mission homepage');const logo=el('img');logo.src=local('assets/DRM_logo.svg');logo.alt='Denver Rescue Mission';logo.width=74;logo.height=74;brand.append(logo);shell.append(brand);
+const menu=el('button','drm-nav-toggle','Menu');menu.type='button';menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-controls','drm-main-nav');shell.append(menu);
+const nav=el('nav','drm-nav');nav.id='drm-main-nav';nav.setAttribute('aria-label','Main navigation');
+const mq=matchMedia('(max-width:1100px)');
+function closeAll(except){nav.querySelectorAll('.drm-nav-group').forEach(g=>{if(g!==except){g.classList.remove('is-open');g.querySelector('button')?.setAttribute('aria-expanded','false')}})}
+for(const [i,[label,url,children]] of links.slice(0,4).entries()){
+ const group=el('div','drm-nav-group');const row=el('div','drm-nav-row');row.append(anchor(label,url,'drm-nav-heading'));
+ const toggle=el('button','drm-sub-toggle');toggle.type='button';toggle.setAttribute('aria-label','Show '+label+' pages');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-controls','drm-sub-'+i);toggle.innerHTML='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>';row.append(toggle);group.append(row);
+ const drop=el('div','drm-dropdown');drop.id='drm-sub-'+i;
+ for(const [name,target] of children)drop.append(anchor(name,target));group.append(drop);
+ function setOpen(open){if(open)closeAll(group);group.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',String(open))}
+ toggle.addEventListener('click',()=>setOpen(!group.classList.contains('is-open')));
+ group.addEventListener('pointerenter',e=>{if(!mq.matches&&e.pointerType==='mouse')setOpen(true)});group.addEventListener('pointerleave',()=>{if(!mq.matches&&!group.contains(document.activeElement))setOpen(false)});
+ group.addEventListener('focusout',()=>setTimeout(()=>{if(!group.contains(document.activeElement))setOpen(false)},0));
+ group.addEventListener('keydown',e=>{if(e.key==='Escape'){setOpen(false);toggle.focus()}});nav.append(group);
 }
-nav.appendChild(group)}
-shell.appendChild(nav);
-const utilities=document.createElement("div");utilities.className="drm-nav-utilities";
-for(const [label,url] of links.slice(4)){utilities.appendChild(anchor(label,url))}
-const searchButton=document.createElement("button");searchButton.type="button";searchButton.className="drm-nav-search";searchButton.setAttribute("aria-label","Search website");searchButton.setAttribute("aria-expanded","false");searchButton.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg>';utilities.appendChild(searchButton);shell.appendChild(utilities);
-shell.appendChild(anchor("DONATE",donate,"drm-nav-donate"));header.appendChild(shell);
-const searchForm=document.createElement("form");searchForm.className="drm-search-form";searchForm.method="get";searchForm.action="https://denverrescuemission.org/";searchForm.setAttribute("role","search");const searchInput=document.createElement("input");searchInput.name="s";searchInput.type="search";searchInput.placeholder="Search Denver Rescue Mission";searchInput.setAttribute("aria-label","Search Denver Rescue Mission");const searchSubmit=document.createElement("button");searchSubmit.type="submit";searchSubmit.textContent="Search";searchForm.append(searchInput,searchSubmit);header.appendChild(searchForm);
-searchButton.addEventListener("click",()=>{const open=searchForm.classList.toggle("is-open");searchButton.setAttribute("aria-expanded",String(open));if(open)searchInput.focus()});
-toggle.addEventListener("click",()=>{const open=nav.classList.toggle("is-mobile-open");toggle.setAttribute("aria-expanded",String(open));toggle.textContent=open?"✕ Close":"☰ Menu"});
-const old=document.querySelector("header");if(old)old.replaceWith(header);else document.body.insertBefore(header,document.body.firstChild);
-const sheet=document.createElement("link");sheet.rel="stylesheet";sheet.href=local("assets/navigation.css");document.head.appendChild(sheet);
-/* Remove trailing decorative arrow glyphs from button text, preserving nested icons and links. */
-function cleanButtonArrows(){
- const items=document.querySelectorAll('a.btn,button.btn,a.button,button.button,a.button-primary,button.button-primary,a.cta-button,button.cta-button,a.drm-nav-donate,button[type="submit"],input[type="submit"],input[type="button"]');
- for(const el of items){
-   if(el.matches('input')){el.value=el.value.replace(/\s*[↗↖↘↙→←➜➔➝➞❯›»]\s*$/u,'').trimEnd();continue;}
-   const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);
-   let last=null;while(walker.nextNode())if(walker.currentNode.nodeValue.trim())last=walker.currentNode;
-   if(last)last.nodeValue=last.nodeValue.replace(/\s*[↗↖↘↙→←➜➔➝➞❯›»]\s*$/u,'').trimEnd();
- }
-}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanButtonArrows,{once:true});
-else cleanButtonArrows();
-const dividerScript=document.createElement("script");dividerScript.src=local("assets/section-dividers.js");dividerScript.defer=true;document.head.appendChild(dividerScript);
+const utilities=el('div','drm-nav-utilities');for(const [label,url] of links.slice(4))utilities.append(anchor(label,url));nav.append(utilities);shell.append(nav);
+const search=el('button','drm-nav-search');search.type='button';search.setAttribute('aria-label','Search the site');search.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>';shell.append(search);shell.append(anchor('Donate','https://my.denverrescuemission.org/denver-rescue-mission/checkout/drm-donate?campaign=325804','drm-nav-donate'));header.append(shell);
+menu.addEventListener('click',()=>{const open=!nav.classList.contains('is-mobile-open');nav.classList.toggle('is-mobile-open',open);menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';if(!open)closeAll()});
+document.addEventListener('click',e=>{if(!header.contains(e.target)){closeAll();nav.classList.remove('is-mobile-open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu'}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('is-mobile-open')){nav.classList.remove('is-mobile-open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu';menu.focus()}});
+mq.addEventListener('change',()=>{closeAll();nav.classList.remove('is-mobile-open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu'});
+const old=document.querySelector('body > header')||document.querySelector('header');if(old)old.replaceWith(header);else document.body.prepend(header);
+const sheet=el('link');sheet.rel='stylesheet';sheet.href=local('assets/navigation.css');document.head.append(sheet);
 })();
