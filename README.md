@@ -47,17 +47,3 @@ Branch: `1.1` (kept independent from the published `main` v1.0 baseline).
 - Homepage-only hero and vision, Stay Connected signup visual, and screenshot footer remain unchanged.
 
 The project is a visual concept. Before promoting `1.1` in GitHub Pages, review responsive layouts, text contrast, and the appearance of individual sections. On this repository, Settings → Pages → Deploy from a branch → `1.1` / `(root)` switches the public preview.
-
-## Functional review draft
-
-The active pages share `assets/draft.css` and `assets/draft.js`, with shared navigation in `assets/navigation.js` and `assets/navigation.css`. The site runs as static HTML; no dependency installation or build step is required.
-
-Start a local review server from the repository root with `python3 -m http.server 8000`. After editing page content, refresh the local search index with `python3 scripts/build-search-index.py`. Search, mobile navigation, section links and native accordions work in the draft. Source content remains readable when JavaScript is unavailable.
-
-Supporting photos and logos are stored under `assets/content/`; `assets/content/sources.json` records their original URLs and file checksums. Formstack blocks remain explicitly labeled placeholders. Donation processing, newsletters and other live services use their real external destinations.
-
-See `DESIGN-REVIEW.md` for the scope of the design refresh and review notes.
-
-Source-specific section colors and background photos are in `assets/source-backgrounds.css`, with placement details in `BACKGROUND-REVIEW.md`. Background custom-property URLs are relative to that stylesheet (for example, `--source-image:url('backgrounds/file.webp')`); ordinary inline background URLs are relative to their HTML page.
-
-Source column arrangements are implemented with CSS Grid in `assets/source-columns.css`. Breakpoint-specific row tracks, gaps and ordering are recorded in `assets/source-column-layouts.json`; see `SOURCE-COLUMN-REVIEW.md` for the matching rows and custom-component adaptations.
